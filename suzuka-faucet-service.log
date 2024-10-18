@@ -1,0 +1,103 @@
+2024-10-18T13:39:28.969798Z [main] INFO networks/suzuka/faucet/src/main.rs:68 Running with root args: Args {
+    server: RunSimple(
+        RunSimple {
+            api_connection_config: ApiConnectionConfig {
+                node_url: Url {
+                    scheme: "http",
+                    cannot_be_a_base: false,
+                    username: "",
+                    password: None,
+                    host: Some(
+                        Domain(
+                            "suzuka-full-node",
+                        ),
+                    ),
+                    port: Some(
+                        30731,
+                    ),
+                    path: "/",
+                    query: None,
+                    fragment: None,
+                },
+                key_file_path: "/not/a/real/path",
+                key: Some(
+                    ConfigKey {
+                        key: <elided secret for Ed25519PrivateKey>,
+                    },
+                ),
+                chain_id: 27,
+            },
+            listen_address: "0.0.0.0",
+            listen_port: 30732,
+            do_not_delegate: false,
+        },
+    ),
+}
+2024-10-18T13:39:28.969862Z [main] INFO /root/.cargo/git/checkouts/aptos-core-1668198cfadb05a3/7a0e210/crates/aptos-faucet/core/src/server/run.rs:71 Running with config: RunConfig {
+    server_config: ServerConfig {
+        listen_address: "0.0.0.0",
+        listen_port: 30732,
+        api_path_base: "",
+    },
+    metrics_server_config: MetricsServerConfig {
+        disable: true,
+        listen_address: "0.0.0.0",
+        listen_port: 1,
+    },
+    bypasser_configs: [],
+    checker_configs: [],
+    funder_config: MintFunder(
+        MintFunderConfig {
+            api_connection_config: ApiConnectionConfig {
+                node_url: Url {
+                    scheme: "http",
+                    cannot_be_a_base: false,
+                    username: "",
+                    password: None,
+                    host: Some(
+                        Domain(
+                            "suzuka-full-node",
+                        ),
+                    ),
+                    port: Some(
+                        30731,
+                    ),
+                    path: "/",
+                    query: None,
+                    fragment: None,
+                },
+                key_file_path: "/dummy",
+                key: Some(
+                    ConfigKey {
+                        key: <elided secret for Ed25519PrivateKey>,
+                    },
+                ),
+                chain_id: 27,
+            },
+            transaction_submission_config: TransactionSubmissionConfig {
+                maximum_amount: None,
+                maximum_amount_with_bypass: None,
+                gas_unit_price_ttl_secs: 30,
+                gas_unit_price_override: None,
+                max_gas_amount: 500000,
+                transaction_expiration_secs: 30,
+                wait_for_outstanding_txns_secs: 35,
+                wait_for_transactions: false,
+            },
+            mint_account_address: Some(
+                000000000000000000000000000000000000000000000000000000000a550c18,
+            ),
+            do_not_delegate: false,
+        },
+    ),
+    handler_config: HandlerConfig {
+        use_helpful_errors: true,
+        return_rejections_early: false,
+        max_concurrent_requests: None,
+    },
+}
+2024-10-18T13:39:29.028104Z [main] INFO /root/.cargo/git/checkouts/aptos-core-1668198cfadb05a3/7a0e210/crates/aptos-faucet/core/src/funder/common.rs:443 {"event":"gas_unit_price_updated","gas_unit_price":100}
+2024-10-18T13:39:32.573625Z [main] INFO /root/.cargo/git/checkouts/aptos-core-1668198cfadb05a3/7a0e210/crates/aptos-faucet/core/src/funder/common.rs:388 {"address":"62ca1a43ae56d457b66881af419393197e174e94f65900ce312ce4e82f7c928d","event":"transaction_success","hash":"22e7214616f03f92dd61bceec964be9ce7c8661b037910b1451f15be30b46e37"}
+2024-10-18T13:39:36.602937Z [main] INFO /root/.cargo/git/checkouts/aptos-core-1668198cfadb05a3/7a0e210/crates/aptos-faucet/core/src/funder/mint.rs:192 Successfully configured MintFunder to use delegated account: 0x62ca1a43ae56d457b66881af419393197e174e94f65900ce312ce4e82f7c928d
+2024-10-18T13:39:36.604868Z [main] INFO /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/poem-1.3.59/src/server.rs {"addr":"socket://0.0.0.0:30732","message":"listening"}
+2024-10-18T13:39:36.604883Z [main] INFO /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/poem-1.3.59/src/server.rs {"message":"server started"}

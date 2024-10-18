@@ -1,0 +1,1 @@
+[2m2024-10-18T13:38:53.416321Z[0m [32m INFO[0m [2mcommander[0m[2m:[0m Running command: celestia-appd start --address tcp://m1-da-light-node-celestia-bridge:26658 --proxy_app tcp://m1-da-light-node-celestia-bridge:26658 --grpc.enable --home /.movement/celestia/1a0fc6292f960b885633/.celestia-app --rpc.laddr tcp://0.0.0.0:26657 --log_level error
